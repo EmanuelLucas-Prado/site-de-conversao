@@ -13,28 +13,27 @@
             height: auto;
             width: 100%;
             font-family: 'Poppins', sans-serif;
-            overflow-x: hidden; /* Isso é o 'seguro de vida' contra vazamentos */
         }
         header {
             display: flex;
             text-align: center;
-            gap: 2em;
+            gap: 2rem;
             align-items: center;
             width: 100%;
-            padding: 30px 40px;
+            padding: 3%;
         }
         .navbar {
-            font-size: 0.9em;
-            gap: 2em;
+            font-size: 0.9rem;
+            gap: 2rem;
         }
         main {
             display: flex;
             flex-direction: column;
             justify-content: center;
             text-align: center;
-            margin: 40px 20px 25px 20px;
-            padding: 20px 20px;
-            gap: 1.2em;
+            margin: 2%;
+            padding: 2%;
+            gap: 1.2rem;
             height: 100%;
             
         }
@@ -44,16 +43,16 @@
             align-items: center;
             text-align: center;
             justify-content: center;
-            gap: 2.7em;
-            font-size: 1.1em;
+            gap: 2.7rem;
+            font-size: 1.1rem;
         }
-        .titulo > h1 {
-            font-size: 3em;
+        .titulo > h2 {
+            font-size: 3rem;
         }
         .entrada {
             display: grid; /* O grid faz com que os blocos possuem o mesmo tamanho idependentemente do tamanho do seu texto. */
             grid-template-columns: repeat(3, 1fr); /*Faz os seu blocos se organizarem na quantidade que você quer...por exemplo, o meu eu organizei em 3 blocos a cada 1 fileira, e que isso era para se repetir caso eu acrescentasse mais blocos. */
-            gap: 4em;
+            gap: 4rem;
             justify-content: center;
             text-align: center;
             padding: 6%;
@@ -69,7 +68,7 @@
             justify-content: center;
             text-align: center;
             flex-direction: column;
-            gap: 2em;
+            gap: 2rem;
             background-color: rgb(152, 65, 233);
             padding: 4%;
             border-radius: 15px;
@@ -106,30 +105,30 @@
                 text-shadow: 0 0 3px  rgb(255, 255, 255); /* O text-shadow funciona para animar ou estilizar os seus textos. */
             }
         }
-        .navbar {
-            animation: neonBrilho 5s infinite; /* Aqui mostra o tempo e quantas vezes a sua animação permanecerá. */
-        }
         .formulario {
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 20px;
+            gap: 2rem;
             border: 3px solid white;
-            padding: 20px 60px 20px 60px;
+            padding-left: 5%;
+            padding-right: 5%;
+            padding-top: 3%;
+            padding-bottom: 3%;
             border-radius: 20px;
             text-align: center;
             margin: 0 auto;
         }
         .formulario > h2 {
-            font-size: 1.7em;
+            font-size: 1.7rem;
         }
         .dados {
            display: flex;
            flex-direction: column;
            align-items: flex-start;
            width: 100%;
+           gap: 0.5rem;
            max-width: 400px;
-           gap: 8px;
            transition: all 2s ease;
         }
         .dados :hover{
@@ -138,7 +137,7 @@
         }
         input {
             width: 100%;
-            padding: 10px;
+            padding: 5%;
             box-sizing: 5px solid white;
             border-radius: 12px;
             background-color: #150029;
@@ -172,85 +171,101 @@
             animation: pulsarDourado 2s infinite;
             margin: 20px 0px 0px 0px;
         }
-@media screen and (max-width: 1190px) {
+@media screen and (min-width: 701px) and (max-width: 1190px) {
+    * {
+        margin: 0;
+        border: 0;
+        box-sizing: border-box;
+    }
+    body {
+        max-width: 100%;
+        height: auto;
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        overflow-x: hidden;
+        background-color: #0e001b;
+    }
+    header {
+        padding: 12px;
+    }
     main {
         display: flex;
         text-align: center;
         justify-content: center;
     }
-
     .titulo {
-        border: 0.8px solid white;
         border-radius: 8px;
-        padding: 30px;
+        padding: 2%;
     }
-
     .entrada {
         display: flex;
         flex-direction: column;
-    }
-}
-@media screen and (max-width: 700px) {
-    header {
-        background-color: rgb(132, 21, 236);
-        padding: 15px;
+        flex-wrap: wrap;
         justify-content: center;
-    }
-
-    .titulo {
-        padding: 40px 15px;
-        border: 0.8px solid white;
-        border-radius: 8px;
+        text-align: center;
+        padding: 5%;
         margin: 10px;
     }
-
-    .titulo > h1 {
-        font-size: 1.8rem;
-        line-height: 1.2;
+    .containers {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
     }
-
+}
+@media screen and (min-width: 300px) and (max-width:700px) { /* Isso é a responsividade em css, no qual o seu site se adapta no tamanho do aparelho que você estiver utilizando */
+    * {
+        margin: 0;
+        border: 0;
+        box-sizing: border-box;
+    }
+    body {
+        width: 100%;
+        height: auto;
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        overflow-x: hidden; /* Ele some com o item que o ultrapassa o limite do width */
+        background-color: #0e001b;
+    } 
+    header {
+        justify-content: center;
+        text-align: center;
+        background-color: rgb(132, 21, 236);
+        padding: 15px;
+    }
+    .titulo > h2 {
+        font-size: 2rem;
+        text-align: left;
+    }
     .titulo > p {
-        font-size: 1rem;
-        margin-top: 15px;
+        text-align: left;
     }
-
+    main {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+        gap: 2em;
+        padding: 2%;
+    }
     .entrada {
         display: flex;
         flex-direction: column;
-        padding: 10px 0;
-        gap: 25px;
+        padding: 4%;
+        gap: 1.5em;
     }
-
     .containers {
-        width: 92%;
-        max-width: none;
-        min-height: auto;
-        padding: 30px 20px;
+        width: 100%;
+        max-width: 500px;
+        min-height: 300px;
+        border: solid;
         margin: 0 auto;
-        border: solid 1px white;
     }
-
-    .containers h3 {
-        font-size: 1.4rem;
-        margin-bottom: 10px;
-    }
-
-    .containers p {
-        font-size: 1rem;
-        line-height: 1.6;
-    }
-
-    .formulario {
-        width: 92%;
-        padding: 30px 20px;
-        margin: 40px auto;
-    }
-
-    .formulario > h2 {
-        font-size: 1.6rem;
-    }
-
-    .dados {
-        max-width: 100%;
+    .titulo {
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
     }
 }
