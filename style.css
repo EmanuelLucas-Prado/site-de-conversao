@@ -173,51 +173,84 @@
             margin: 20px 0px 0px 0px;
         }
 @media screen and (max-width: 1190px) {
+    main {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .titulo {
+        border: 0.8px solid white;
+        border-radius: 8px;
+        padding: 30px;
+    }
+
     .entrada {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        gap: 2em;
-    }
-    .containers {
-        width: 90%;
-        max-width: 500px;
-    }
-    .titulo {
-        border: solid white;
-        border-radius: 8px;
-        animation: pulsarBrilho 2s infinite;
-        padding: 20px 10px;
     }
 }
 @media screen and (max-width: 700px) {
     header {
         background-color: rgb(132, 21, 236);
         padding: 15px;
+        justify-content: center;
     }
 
     .titulo {
-        padding: 20px 15px;
+        padding: 40px 15px;
+        border: 0.8px solid white;
+        border-radius: 8px;
+        margin: 10px;
     }
 
     .titulo > h1 {
-        font-size: 1.8rem; /* Rem é melhor que Em para evitar efeito cascata */
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+
+    .titulo > p {
+        font-size: 1rem;
+        margin-top: 15px;
     }
 
     .entrada {
-        padding: 10px;
-        gap: 1.5em;
+        display: flex;
+        flex-direction: column;
+        padding: 10px 0;
+        gap: 25px;
     }
 
     .containers {
-        width: 100%;
-        max-width: 320px; /* Garante que caiba no Moto E40 que é estreito */
-        min-height: auto; /* Deixa a altura livre para o texto não vazar */
-        padding: 20px;
+        width: 92%;
+        max-width: none;
+        min-height: auto;
+        padding: 30px 20px;
+        margin: 0 auto;
+        border: solid 1px white;
+    }
+
+    .containers h3 {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+    }
+
+    .containers p {
+        font-size: 1rem;
+        line-height: 1.6;
     }
 
     .formulario {
-        width: 95%;
-        padding: 20px; /* Reduzi os 60px que estavam esmagando o form */
+        width: 92%;
+        padding: 30px 20px;
+        margin: 40px auto;
+    }
+
+    .formulario > h2 {
+        font-size: 1.6rem;
+    }
+
+    .dados {
+        max-width: 100%;
     }
 }
